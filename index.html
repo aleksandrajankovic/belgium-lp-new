@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700;900&family=Roboto:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: #0b1218;
+        color: #ffffff;
+      }
+      .bg-meridian-red {
+        background-color: #c4120c;
+      }
+      .bg-meridian-green {
+        background-color: #24c000;
+      }
+      .card-gradient {
+        background: linear-gradient(90deg, #1c2f38 0%, #10181c 100%);
+      }
+      .promo-banner {
+        background: url("./images/cover.png");
+        background-size: cover;
+        background-position: center;
+      }
+      .footer-link-bg {
+        background-color: #1a2631;
+      }
+      .border-gray-custom {
+        border-color: #2a3642;
+      }
+      .font-condensed {
+        font-family: "Roboto Condensed", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="min-h-screen flex flex-col">
+      <!-- Header (ostaje) -->
+      <header
+        class="bg-meridian-red h-12 flex items-center justify-between px-4 md:px-6 sticky top-0 z-50"
+      >
+        <div class="flex items-center">
+          <img src="./images/logo.png" alt="Meridianbet logo" />
+        </div>
+
+        <div class="flex items-center space-x-2">
+          <div
+            class="w-6 h-4 bg-white rounded-sm overflow-hidden flex flex-col"
+          >
+            <div class="h-1/3 bg-black"></div>
+            <div class="h-1/3 bg-yellow-400"></div>
+            <div class="h-1/3 bg-red-600"></div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main -->
+      <main class="flex-grow w-full">
+        <div class="mx-auto w-full max-w-7xl px-4 md:px-6 py-6 md:py-10">
+          <!-- MOBILE STACK: 2 promo cards -->
+          <section
+            class="md:hidden mx-auto w-full max-w-auto px-3 py-4 space-y-4"
+          >
+            <!-- CARD 1 -->
+            <article class="w-full max-w-[100%]">
+              <!-- TOP: IMAGE + TEXT + CTA -->
+              <div
+                class="relative overflow-hidden rounded-2xl border border-white/10 bg-[#10181C] shadow-[0_20px_60px_rgba(0,0,0,0.45)]"
+              >
+                <!-- image -->
+                <div class="relative">
+                  <img
+                    src="./images/sport-img.png"
+                    alt="Sports betting"
+                    class="absolute inset-0 h-full w-full object-cover object-left"
+                  />
+
+                  <!-- overlay (your gradients) -->
+                  <div
+                    class="absolute inset-0"
+                    style="
+                      background: linear-gradient(
+                          270deg,
+                          rgba(28, 47, 56, 0) 27.23%,
+                          #10181c 44.17%
+                        ),
+                        linear-gradient(
+                          90deg,
+                          #1c2f38 0%,
+                          rgba(16, 24, 28, 0) 100%
+                        );
+                    "
+                  ></div>
+
+                  <!-- content -->
+                  <div class="relative z-10 p-5 sm:p-6">
+                    <h3
+                      class="font-['Roboto_Condensed'] text-[22px] sm:text-[26px] font-bold uppercase tracking-wide"
+                    >
+                      SPORTS BETTING
+                    </h3>
+
+                    <p
+                      class="mt-2 max-w-[270px] text-[13px] sm:text-[14px] leading-snug text-white/70"
+                    >
+                      Don’t miss the Action! Explore the Latest Sports Events
+                      and Exclusive Promotions Now.
+                    </p>
+
+                    <button
+                      class="mt-4 inline-flex items-center justify-center rounded-xl bg-[#24c000] px-6 py-3 text-[12px] font-extrabold uppercase tracking-wide text-white hover:brightness-110 transition shadow-[0_10px_30px_rgba(36,192,0,0.25)]"
+                    >
+                      LEARN MORE
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- BOTTOM: STORE BUTTONS (separate block) -->
+              <div class="mt-4 grid grid-cols-2 gap-4">
+                <a
+                  href="https://download-file-app.meridianbet.com/download-service/api/download-file-latest/49c84625-065b-4278-acdd-595f668adf3d"
+                  class="flex items-center gap-3 rounded-2xl bg-[#122028] px-4 py-4 border border-white/5 hover:bg-white/5 transition"
+                >
+                  <img src="./images/android-icon.png" alt="Android" />
+                  <div class="leading-tight">
+                    <div class="text-[12px] text-white/70 font-semibold">
+                      Available on
+                    </div>
+                    <div class="text-[16px] font-extrabold text-white">
+                      Google Play
+                    </div>
+                  </div>
+                </a>
+
+                <a
+                  href="https://itunes.apple.com/be/app/id1223008241"
+                  class="flex items-center gap-3 rounded-2xl bg-[#122028] px-4 py-4 border border-white/5 hover:bg-white/5 transition"
+                >
+                  <img src="./images/ios-icon.png" alt="Apple" />
+                  <div class="leading-tight">
+                    <div class="text-[12px] text-white/70 font-semibold">
+                      Available on
+                    </div>
+                    <div class="text-[16px] font-extrabold text-white">
+                      App Store
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </article>
+
+            <!-- CARD 2 -->
+            <article class="w-full max-w-[100%]">
+              <!-- TOP: IMAGE + TEXT + CTA -->
+              <div
+                class="relative overflow-hidden rounded-2xl border border-white/10 bg-[#10181C] shadow-[0_20px_60px_rgba(0,0,0,0.45)]"
+              >
+                <!-- image -->
+                <div class="relative">
+                  <img
+                    src="./images/casino-img.png"
+                    alt="Sports betting"
+                    class="absolute inset-0 h-full w-full object-cover object-left"
+                  />
+
+                  <!-- overlay (your gradients) -->
+                  <div
+                    class="absolute inset-0"
+                    style="
+                      background: linear-gradient(
+                          270deg,
+                          rgba(28, 47, 56, 0) 27.23%,
+                          #10181c 44.17%
+                        ),
+                        linear-gradient(
+                          90deg,
+                          #1c2f38 0%,
+                          rgba(16, 24, 28, 0) 100%
+                        );
+                    "
+                  ></div>
+
+                  <!-- content -->
+                  <div class="relative z-10 p-5 sm:p-6">
+                    <h3
+                      class="font-['Roboto_Condensed'] text-[22px] sm:text-[26px] font-bold uppercase tracking-wide"
+                    >
+                      CASINO
+                    </h3>
+
+                    <p
+                      class="mt-2 max-w-[270px] text-[13px] sm:text-[14px] leading-snug text-white/70"
+                    >
+                      Don’t miss the Action! Explore the Latest Sports Events
+                      and Exclusive Promotions Now.
+                    </p>
+
+                    <button
+                      class="mt-4 inline-flex items-center justify-center rounded-xl bg-[#24c000] px-6 py-3 text-[12px] font-extrabold uppercase tracking-wide text-white hover:brightness-110 transition shadow-[0_10px_30px_rgba(36,192,0,0.25)]"
+                    >
+                      LEARN MORE
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- BOTTOM: STORE BUTTONS (separate block) -->
+              <div class="mt-4 grid grid-cols-2 gap-4">
+                <a
+                  href="https://download-file-app.meridianbet.com/download-service/api/download-file-latest/49c84625-065b-4278-acdd-595f668adf3d"
+                  class="flex items-center gap-3 rounded-2xl bg-[#122028] px-4 py-4 border border-white/5 hover:bg-white/5 transition"
+                >
+                  <img src="./images/android-icon.png" alt="Android" />
+                  <div class="leading-tight">
+                    <div class="text-[12px] text-white/70 font-semibold">
+                      Available on
+                    </div>
+                    <div class="text-[16px] font-extrabold text-white">
+                      Google Play
+                    </div>
+                  </div>
+                </a>
+
+                <a
+                  href="https://itunes.apple.com/be/app/id1223008241"
+                  class="flex items-center gap-3 rounded-2xl bg-[#122028] px-4 py-4 border border-white/5 hover:bg-white/5 transition"
+                >
+                  <img src="./images/ios-icon.png" alt="Apple" />
+                  <div class="leading-tight">
+                    <div class="text-[12px] text-white/70 font-semibold">
+                      Available on
+                    </div>
+                    <div class="text-[16px] font-extrabold text-white">
+                      App Store
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </article>
+          </section>
+
+          <!-- Desktop - Top Cards -->
+          <div
+            class="hidden md:grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-6 md:mb-8"
+          >
+            <!-- Card -->
+            <div
+              class="card-gradient rounded-xl overflow-hidden border border-gray-800 shadow-2xl"
+            >
+              <div class="relative overflow-hidden h-36 sm:h-44 md:h-48">
+                <img
+                  src="./images/sport-img.png"
+                  class="w-full h-full object-cover"
+                  alt="Sports"
+                />
+              </div>
+
+              <div class="p-4 sm:p-5 md:p-6 text-center">
+                <h2
+                  class="font-condensed font-bold uppercase mb-2 text-[clamp(18px,3.2vw,28px)]"
+                >
+                  SPORTS BETTING
+                </h2>
+
+                <p
+                  class="text-gray-300/80 mb-4 md:mb-6 text-[clamp(12px,2.2vw,14px)] leading-snug"
+                >
+                  Don't miss the Action! Explore the Latest Sports Events and
+                  Exclusive Promotions Now.
+                </p>
+
+                <button
+                  class="bg-meridian-green w-full sm:w-[70%] md:w-[55%] py-3 rounded-lg font-bold uppercase text-[clamp(12px,2vw,14px)] hover:brightness-110 transition mb-3 md:mb-4"
+                >
+                  Learn More
+                </button>
+
+                <div class="grid grid-cols-2 gap-2">
+                  <a
+                    href="https://download-file-app.meridianbet.com/download-service/api/download-file-latest/49c84625-065b-4278-acdd-595f668adf3d"
+                    target="_blank"
+                    class="bg-[#FFFFFF0D] py-3 rounded-lg flex items-center justify-center gap-2 text-[10px] uppercase font-bold"
+                  >
+                    <img src="./images/android-icon.png" alt="Android" />
+                    <span class="leading-tight"
+                      >Available on<br />Google Play</span
+                    >
+                  </a>
+
+                  <a
+                    href="https://itunes.apple.com/be/app/id1223008241"
+                    target="_blank"
+                    class="bg-[#FFFFFF0D] py-3 rounded-lg flex items-center justify-center gap-2 text-[10px] uppercase font-bold"
+                  >
+                    <img src="./images/ios-icon.png" alt="Apple" />
+                    <span class="leading-tight"
+                      >Available on<br />App Store</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="card-gradient rounded-xl overflow-hidden border border-gray-800 shadow-2xl"
+            >
+              <div class="relative overflow-hidden h-36 sm:h-44 md:h-48">
+                <img
+                  src="./images/casino-img.png"
+                  class="w-full h-full object-cover"
+                  alt="Casino"
+                />
+              </div>
+
+              <div class="p-4 sm:p-5 md:p-6 text-center">
+                <h2
+                  class="font-condensed font-bold uppercase mb-2 text-[clamp(18px,3.2vw,28px)]"
+                >
+                  CASINO
+                </h2>
+
+                <p
+                  class="text-gray-300/80 mb-4 md:mb-6 text-[clamp(12px,2.2vw,14px)] leading-snug"
+                >
+                  Experience the Thrill in Real-Time! Dive into the Largest
+                  Selection of Live Betting Events.
+                </p>
+
+                <button
+                  class="bg-meridian-green w-full sm:w-[70%] md:w-[55%] py-3 rounded-lg font-bold uppercase text-[clamp(12px,2vw,14px)] hover:brightness-110 transition mb-3 md:mb-4"
+                >
+                  Learn More
+                </button>
+
+                <div class="grid grid-cols-2 gap-2">
+                  <a
+                    href="https://download-file-app.meridianbet.com/download-service/api/download-file-latest/49c84625-065b-4278-acdd-595f668adf3d"
+                    target="_blank"
+                    class="bg-[#FFFFFF0D] py-3 rounded-lg flex items-center justify-center gap-2 text-[10px] uppercase font-bold"
+                  >
+                    <img src="./images/android-icon.png" alt="Android" />
+                    <span class="leading-tight"
+                      >Available on<br />Google Play</span
+                    >
+                  </a>
+
+                  <a
+                    href="https://itunes.apple.com/be/app/id1223008241"
+                    target="_blank"
+                    class="bg-[#FFFFFF0D] py-3 rounded-lg flex items-center justify-center gap-2 text-[10px] uppercase font-bold"
+                  >
+                    <img src="./images/ios-icon.png" alt="Apple" />
+                    <span class="leading-tight"
+                      >Available on<br />App Store</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Big Promo Banner -->
+          <div
+            class="promo-banner rounded-2xl overflow-hidden border border-gray-800 mb-8 md:mb-12"
+          >
+            <!-- overlay da tekst bude čitljiv i na mobile -->
+            <div class="bg-black/35">
+              <div class="p-5 sm:p-6 md:p-10">
+                <div class="max-w-3xl">
+                  <div
+                    class="font-condensed font-bold mb-2 text-[clamp(18px,3vw,32px)]"
+                  >
+                    More selections
+                  </div>
+
+                  <div
+                    class="font-condensed font-bold uppercase leading-none text-red-600 text-[clamp(34px,6vw,64px)]"
+                  >
+                    Bigger Potential Returns
+                  </div>
+
+                  <div
+                    class="font-condensed font-bold mt-2 text-[clamp(22px,4vw,44px)]"
+                  >
+                    1500% <span class="text-red-600">FULL BOOST</span>
+                  </div>
+
+                  <p
+                    class="mt-4 md:mt-5 text-white/90 text-[clamp(13px,2.2vw,18px)] leading-relaxed"
+                  >
+                    Welcome to the House of Boosted Odds, where your odds
+                    increase as you add more selections.<br />
+                    Maximize your betting strategy and let the system do the
+                    work — the more you play, the more your ticket is boosted.
+                  </p>
+
+                  <!-- mobile: stacked / tablet+: inline -->
+                  <div
+                    class="mt-5 md:mt-7 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6"
+                  >
+                    <button
+                      class="bg-meridian-green w-full sm:w-auto sm:min-w-[260px] md:min-w-[320px] py-3 rounded-lg font-bold uppercase text-[clamp(12px,2vw,14px)] hover:brightness-110 transition"
+                    >
+                      Join the Action
+                    </button>
+
+                    <button
+                      class="flex items-center justify-center sm:justify-start gap-2 text-xs uppercase font-bold text-gray-200 hover:text-white"
+                    >
+                      <svg
+                        class="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        ></path>
+                      </svg>
+                      <span>Promotion Details</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SEO Content -->
+          <div
+            class="border border-gray-custom rounded-2xl p-5 sm:p-6 md:p-8 text-center mb-8 md:mb-12"
+          >
+            <h4 class="font-bold mb-2 text-[clamp(12px,2vw,14px)]">Betting</h4>
+
+            <h3 class="font-bold mb-4 text-[clamp(16px,2.6vw,18px)]">
+              Online Betting Belgium: welcome to Meridianbet
+            </h3>
+
+            <div
+              class="max-w-4xl mx-auto text-gray-400 space-y-4 leading-relaxed text-[clamp(11px,2vw,12px)]"
+            >
+              <p class="font-bold text-gray-300">
+                Introduction to Online Betting in Belgium
+              </p>
+              <p>
+                Online betting in Belgium has grown rapidly, with more players
+                seeking reliable platforms that offer excitement, variety, and
+                security. Meridianbet stands out as a leading site for
+                <strong>online betting Belgium</strong>, thanks to its
+                innovative features, vast sports coverage, and user-friendly
+                experience.
+              </p>
+              <p class="font-bold text-gray-300">
+                Why Meridianbet Is a Top Choice for Online Betting
+              </p>
+              <p class="font-bold text-gray-300">
+                Trusted and Regulated in Belgium
+              </p>
+              <p>
+                Meridianbet is fully licensed to operate in Belgium, providing
+                bettors with peace of mind, strong security protocols, and
+                compliance with local regulations.
+              </p>
+            </div>
+
+            <button
+              class="mt-6 border border-gray-600 px-6 py-2 rounded-lg text-[10px] font-bold uppercase hover:bg-white/5 transition"
+            >
+              Show more
+            </button>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="w-full">
+        <div class="mx-auto w-full max-w-7xl px-4 md:px-6 pb-10">
+          <!-- Payment Methods -->
+          <div
+            class="flex flex-wrap justify-center items-center gap-5 sm:gap-7 mb-8 opacity-90"
+          >
+            <img
+              class="h-6 sm:h-7"
+              src="./images/icons/ios-icon.svg"
+              alt="Bancontact"
+            />
+            <img
+              class="h-6 sm:h-7"
+              src="./images/icons/ideal.svg"
+              alt="Ideal"
+            />
+            <img
+              class="h-6 sm:h-7"
+              src="./images/icons/belfius.svg"
+              alt="Belfius"
+            />
+            <img class="h-6 sm:h-7" src="./images/icons/ing.svg" alt="ING" />
+            <img
+              class="h-6 sm:h-7"
+              src="./images/icons/skrill.svg"
+              alt="Skrill"
+            />
+            <img
+              class="h-6 sm:h-7"
+              src="./images/icons/sofort.svg"
+              alt="Sofort"
+            />
+            <img
+              class="h-8 sm:h-9"
+              src="./images/icons/hipay.svg"
+              alt="Hipay"
+            />
+            <img
+              class="h-6 sm:h-7"
+              src="./images/icons/neteller.svg"
+              alt="Neteller"
+            />
+            <img
+              class="h-6 sm:h-7"
+              src="./images/icons/paysafe.svg"
+              alt="Paysafe"
+            />
+          </div>
+
+          <!-- Footer Links -->
+          <div class="footer-link-bg rounded-xl p-3 mb-6">
+            <div
+              class="flex flex-wrap justify-center gap-x-5 gap-y-2 text-[10px] font-bold uppercase text-gray-400"
+            >
+              <a
+                href="https://help.meridianbet.be/en/category/1171/page/10471"
+                target="_blank"
+                class="hover:text-white"
+                >Terms & Conditions</a
+              >
+              <a
+                href="https://help.meridianbet.be/en/category/1171/page/10470"
+                target="_blank"
+                class="hover:text-white"
+                >Rule Book</a
+              >
+              <a
+                href="https://help.meridianbet.be/en/category/1171/page/10466"
+                target="_blank"
+                class="hover:text-white"
+                >Responsible Gaming</a
+              >
+              <a
+                href="https://promo.meridianbet.be/en"
+                target="_blank"
+                class="hover:text-white"
+                >Promotions</a
+              >
+              <a
+                href="https://www.gamingcommission.be/en/protection-of-players"
+                target="_blank"
+                class="hover:text-white"
+                >Protection of Gamblers</a
+              >
+              <a
+                href="https://help.meridianbet.be/en/category/1171/page/17223"
+                target="_blank"
+                class="hover:text-white"
+                >Privacy Policy</a
+              >
+              <a
+                href="https://help.meridianbet.be/en/category/1171/page/17225"
+                target="_blank"
+                class="hover:text-white"
+                >Cookie Policy</a
+              >
+            </div>
+          </div>
+
+          <!-- Social Icons -->
+          <div class="flex justify-center gap-4 mb-6">
+            <a
+              href="https://www.facebook.com/MeridianbetBelgium/"
+              target="_blank"
+              class="w-9 h-9 bg-[#1a2631] rounded-lg flex items-center justify-center text-gray-300 hover:text-white transition"
+            >
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
+                />
+              </svg>
+            </a>
+
+            <a
+              href="https://twitter.com/Meridianbet_be"
+              target="_blank"
+              class="w-9 h-9 bg-[#1a2631] rounded-lg flex items-center justify-center text-gray-300 hover:text-white transition"
+            >
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                />
+              </svg>
+            </a>
+
+            <a
+              href="https://www.instagram.com/meridianbet_belgium/"
+              target="_blank"
+              class="w-9 h-9 bg-[#1a2631] rounded-lg flex items-center justify-center text-gray-300 hover:text-white transition"
+            >
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                />
+              </svg>
+            </a>
+
+            <a
+              href="https://www.youtube.com/channel/UCdqnvUa6v8AyB0T18NzHaMQ"
+              target="_blank"
+              class="w-9 h-9 bg-[#1a2631] rounded-lg flex items-center justify-center text-gray-300 hover:text-white transition"
+            >
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <!-- Affiliate & Commission -->
+          <div
+            class="bg-[#1a2631] rounded-xl p-4 flex flex-wrap justify-center items-center gap-6 mb-6"
+          >
+            <img
+              class="h-7"
+              src="./images/icons/commission_en.svg"
+              alt="Gaming Commission"
+            />
+            <img
+              class="h-7"
+              src="./images/icons/affiliate.svg"
+              alt="Affiliate"
+            />
+            <img
+              class="h-7"
+              src="./images/icons/playlegally.png"
+              alt="Play Legally"
+            />
+            <img class="h-7" src="./images/icons/adult21.svg" alt="21+" />
+          </div>
+
+          <!-- Legal Text -->
+          <div
+            class="text-[10px] sm:text-[11px] text-gray-500 text-center uppercase leading-relaxed max-w-4xl mx-auto"
+          >
+            MERIDIANBET.BE IS OPERATED BY MYBESTODSS BVBA, A BELGIAN COMPANY
+            WITH COMPANY NUMBER 0838.859.661 REGISTERED ON THE ADDRESS
+            SCHALIENHOEVEDREEF 20T, 2800 MECHELEN, BELGIUM. MYBESTODDS BVBA IS
+            LICENCED AND REGULATED BY THE BELGIAN GAMING COMMISSION UNDER
+            LICENCE NUMBER FA+126361
+          </div>
+
+          <!-- Back to top -->
+          <div class="flex justify-center mt-8">
+            <button
+              onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+              class="bg-[#1a2631] p-3 rounded-lg hover:bg-white/10 transition"
+              aria-label="Back to top"
+            >
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 15l7-7 7 7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
