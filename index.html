@@ -21,10 +21,10 @@
         color: #ffffff;
       }
       .bg-meridian-red {
-        background-color: #c4120c;
+        background: linear-gradient(90deg, #a5080e 0%, #d11101 100%);
       }
       .bg-meridian-green {
-        background-color: #24c000;
+        background-color: #17bb00;
       }
       .card-gradient {
         background: linear-gradient(90deg, #1c2f38 0%, #10181c 100%);
@@ -52,16 +52,16 @@
       <header
         class="bg-meridian-red h-12 flex items-center justify-between px-4 md:px-6 sticky top-0 z-50"
       >
-        <!-- LEFT: logo + nav links -->
-        <div class="flex items-center md:gap-6 gap-2">
+        <!-- LEFT: logo + (DESKTOP nav) -->
+        <div class="flex items-center md:gap-6 gap-4">
           <img
             src="./images/logo.png"
             alt="Meridianbet logo"
-            class="w-[100px] md:w-[100%]"
+            class="w-[100px] md:w-auto"
           />
 
-          <!-- links pored logo -->
-          <nav class="flex items-center gap-4">
+          <!-- DESKTOP links pored logo -->
+          <nav class="hidden md:flex items-center gap-4">
             <a
               href="#casino"
               data-i18n="nav.link1"
@@ -74,80 +74,103 @@
               href="#sport"
               data-i18n="nav.link2"
               data-i18n-href="nav.linkSport"
-              class="text-white/90 hover:text-white text-[14px] font-semibold transition whitespace-nowrap shrink-0"
+              class="text-white/90 hover:text-white text-[14px] font-semibold transition whitespace-nowrap"
             >
               Sport
             </a>
           </nav>
         </div>
 
-        <!-- RIGHT: language dropdown -->
-        <div class="relative" id="lang-switch">
-          <button
-            type="button"
-            id="lang-trigger"
-            class="flex items-center gap-2 rounded-md bg-white/5 hover:bg-white/10 transition py-1"
-            aria-haspopup="listbox"
-            aria-expanded="false"
-          >
-            <img
-              id="lang-current-flag"
-              src="./images/flags/en.svg"
-              alt="English"
-              class="w-6 h-4 rounded-sm object-cover"
-            />
-          </button>
+        <!-- RIGHT: (MOBILE nav) + language dropdown -->
+        <div class="flex items-center gap-3">
+          <!-- MOBILE links pored language -->
+          <nav class="flex md:hidden items-center gap-3">
+            <a
+              href="#casino"
+              data-i18n="nav.link1"
+              data-i18n-href="nav.linkCasino"
+              class="text-white/90 hover:text-white text-[13px] font-semibold transition"
+            >
+              Casino
+            </a>
+            <a
+              href="#sport"
+              data-i18n="nav.link2"
+              data-i18n-href="nav.linkSport"
+              class="text-white/90 hover:text-white text-[13px] font-semibold transition whitespace-nowrap"
+            >
+              Sport
+            </a>
+          </nav>
 
-          <div
-            id="lang-menu"
-            class="hidden absolute right-0 mt-2 w-10 rounded-xl bg-[#0f1a22] border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.55)] p-1 z-50"
-            role="listbox"
-            aria-label="Select language"
-          >
+          <!-- language dropdown -->
+          <div class="relative" id="lang-switch">
             <button
               type="button"
-              data-lang-option="fr"
-              class="w-full flex items-center justify-center rounded-lg py-2 hover:bg-white/10 transition"
-              role="option"
-              aria-selected="false"
-              title="Français"
+              id="lang-trigger"
+              class="flex items-center gap-2 rounded-md bg-white/5 hover:bg-white/10 transition py-1 px-2"
+              aria-haspopup="listbox"
+              aria-expanded="false"
             >
               <img
-                src="./images/icons/fr.svg"
-                alt="Français"
-                class="w-6 h-4 rounded-sm object-cover"
-              />
-            </button>
-
-            <button
-              type="button"
-              data-lang-option="en"
-              class="w-full flex items-center justify-center rounded-lg py-2 hover:bg-white/10 transition"
-              role="option"
-              aria-selected="false"
-              title="English"
-            >
-              <img
-                src="./images/icons/en.svg"
+                id="lang-current-flag"
+                src="./images/flags/en.svg"
                 alt="English"
                 class="w-6 h-4 rounded-sm object-cover"
               />
             </button>
 
-            <button
-              type="button"
-              data-lang-option="nl"
-              class="w-full flex items-center justify-center rounded-lg py-2 hover:bg-white/10 transition"
-              role="option"
-              aria-selected="false"
-              title="Nederlands"
+            <div
+              id="lang-menu"
+              class="hidden absolute right-0 mt-2 w-10 rounded-xl bg-[#0f1a22] border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.55)] p-1 z-50"
+              role="listbox"
+              aria-label="Select language"
             >
-              <img
-                src="./images/icons/nl.svg"
-                alt="Nederlands"
-                class="w-6 h-4 rounded-sm object-cover"
-              />
-            </button>
+              <button
+                type="button"
+                data-lang-option="fr"
+                class="w-full flex items-center justify-center rounded-lg py-2 hover:bg-white/10 transition"
+                role="option"
+                aria-selected="false"
+                title="Français"
+              >
+                <img
+                  src="./images/icons/fr.svg"
+                  alt="Français"
+                  class="w-6 h-4 rounded-sm object-cover"
+                />
+              </button>
+
+              <button
+                type="button"
+                data-lang-option="en"
+                class="w-full flex items-center justify-center rounded-lg py-2 hover:bg-white/10 transition"
+                role="option"
+                aria-selected="false"
+                title="English"
+              >
+                <img
+                  src="./images/icons/en.svg"
+                  alt="English"
+                  class="w-6 h-4 rounded-sm object-cover"
+                />
+              </button>
+
+              <button
+                type="button"
+                data-lang-option="nl"
+                class="w-full flex items-center justify-center rounded-lg py-2 hover:bg-white/10 transition"
+                role="option"
+                aria-selected="false"
+                title="Nederlands"
+              >
+                <img
+                  src="./images/icons/nl.svg"
+                  alt="Nederlands"
+                  class="w-6 h-4 rounded-sm object-cover"
+                />
+              </button>
+            </div>
           </div>
         </div>
       </header>
@@ -305,7 +328,7 @@
                       target="_blank"
                       data-i18n="card1.cta"
                       data-i18n-href="card1.link"
-                      class="mt-4 inline-flex items-center justify-center font-condensed rounded-lg bg-[#24c000] px-6 h-[32px] text-[12px] font-medium uppercase tracking-wide text-white hover:brightness-110 transition shadow-[0_10px_30px_rgba(36,192,0,0.25)]"
+                      class="mt-4 inline-flex items-center justify-center font-condensed rounded-lg bg-[#17BB00] px-6 h-[32px] text-[12px] font-medium uppercase tracking-wide text-white hover:brightness-110 transition shadow-[0_10px_30px_rgba(36,192,0,0.25)]"
                     >
                     </a>
                     <a
@@ -385,7 +408,7 @@
                     rel="noopener"
                     data-i18n="card2.cta"
                     data-i18n-href="card2.link"
-                    class="inline-flex font-condensed items-center justify-center rounded-lg h-[42px] bg-[#17BB00] px-6 py-3 text-[17px] font-medium uppercase tracking-wide text-white hover:brightness-110 transition shadow-[0_10px_30px_rgba(36,192,0,0.25)]"
+                    class="inline-flex font-condensed items-center justify-center rounded-lg h-[42px] bg-[#17BB00] px-6 py-3 [@media(min-width:768px)_and_(max-width:920px)]:h-[60px] text-[17px] font-medium uppercase tracking-wide text-white hover:brightness-110 transition shadow-[0_10px_30px_rgba(36,192,0,0.25)]"
                   >
                     GO TO CASINO
                   </a>
@@ -396,7 +419,7 @@
                     rel="noopener"
                     data-i18n="card2.reg"
                     data-i18n-href="card2.linkReg"
-                    class="inline-flex items-center font-condensed justify-center rounded-lg h-[42px] bg-[#FACC01] px-6 py-3 text-[17px] font-medium uppercase tracking-wide text-[#2D2D2D] hover:brightness-110 transition shadow-[0_10px_30px_rgba(245,196,0,0.20)]"
+                    class="inline-flex items-center font-condensed justify-center rounded-lg h-[42px] bg-[#FACC01] px-6 py-3 [@media(min-width:768px)_and_(max-width:920px)]:h-[60px] text-[17px] font-medium uppercase tracking-wide text-[#2D2D2D] hover:brightness-110 transition shadow-[0_10px_30px_rgba(245,196,0,0.20)]"
                   >
                     reg
                   </a>
@@ -476,7 +499,7 @@
                     rel="noopener"
                     data-i18n="card1.cta"
                     data-i18n-href="card1.link"
-                    class="inline-flex font-condensed items-center justify-center rounded-lg h-[42px] bg-[#17BB00] px-6 py-3 text-[17px] font-medium uppercase tracking-wide text-white hover:brightness-110 transition shadow-[0_10px_30px_rgba(36,192,0,0.25)]"
+                    class="inline-flex font-condensed items-center justify-center rounded-lg h-[42px] [@media(min-width:768px)_and_(max-width:920px)]:h-[60px] bg-[#17BB00] px-6 py-3 text-[17px] font-medium uppercase tracking-wide text-white hover:brightness-110 transition shadow-[0_10px_30px_rgba(36,192,0,0.25)]"
                   >
                     GO TO CASINO
                   </a>
@@ -487,7 +510,7 @@
                     rel="noopener"
                     data-i18n="card1.reg"
                     data-i18n-href="card1.linkReg"
-                    class="inline-flex items-center font-condensed justify-center rounded-lg h-[42px] bg-[#FACC01] px-6 py-3 text-[17px] font-medium uppercase tracking-wide text-[#2D2D2D] hover:brightness-110 transition shadow-[0_10px_30px_rgba(245,196,0,0.20)]"
+                    class="inline-flex items-center font-condensed justify-center rounded-lg h-[42px] [@media(min-width:768px)_and_(max-width:920px)]:h-[60px] bg-[#FACC01] px-6 py-3 text-[17px] font-medium uppercase tracking-wide text-[#2D2D2D] hover:brightness-110 transition shadow-[0_10px_30px_rgba(245,196,0,0.20)]"
                   >
                     reg
                   </a>
@@ -606,58 +629,55 @@
           </div>
 
           <!-- SEO Content -->
-          <div
-            class="border border-gray-custom rounded-2xl p-5 sm:p-6 md:p-8 text-center mb-8 md:mb-12"
+          <section
+            class="border border-gray-custom rounded-2xl text-[#396F85] p-5 sm:p-6 md:p-8 text-center mb-8 md:mb-12"
           >
-            <h4
+            <p
               data-i18n="seo.tag"
               class="font-bold mb-2 text-[clamp(12px,2vw,14px)]"
             >
               Betting
-            </h4>
+            </p>
 
-            <h3
-              data-i18n="seo.title"
+            <!-- H1 (ali vizuelno kao tvoj h3) -->
+            <h1
+              data-i18n="seo.h1"
               class="font-bold mb-4 text-[clamp(16px,2.6vw,18px)]"
             >
               Online Betting Belgium: welcome to Meridianbet
-            </h3>
+            </h1>
 
             <div
-              class="max-w-4xl mx-auto text-gray-400 space-y-4 leading-relaxed text-[clamp(11px,2vw,12px)]"
+              class="max-w-4xl mx-auto space-y-4 leading-relaxed text-[clamp(11px,2vw,12px)] text-justify"
             >
-              <p data-i18n="seo.introTitle" class="font-bold text-gray-300">
+              <p
+                data-i18n="seo.introTitle"
+                class="font-bold text-center"
+              >
                 Introduction to Online Betting in Belgium
               </p>
+
+              <!-- introBody ima <strong> pa se setuje preko innerHTML -->
               <p data-i18n="seo.introBody">
-                Online betting in Belgium has grown rapidly, with more players
-                seeking reliable platforms that offer excitement, variety, and
-                security. Meridianbet stands out as a leading site for
-                <strong>online betting Belgium</strong>, thanks to its
-                innovative features, vast sports coverage, and user-friendly
-                experience.
-              </p>
-              <p data-i18n="seo.whyTitle" class="font-bold text-gray-300">
-                Why Meridianbet Is a Top Choice for Online Betting
-              </p>
-              <p data-i18n="seo.trustedTitle" class="font-bold text-gray-300">
-                Trusted and Regulated in Belgium
-              </p>
-              <p data-i18n="seo.trustedBody">
-                Meridianbet is fully licensed to operate in Belgium, providing
-                bettors with peace of mind, strong security protocols, and
-                compliance with local regulations.
+                Online betting in Belgium has grown rapidly...
               </p>
             </div>
-            <div id="seo-more" class="seo-rich hidden mt-6 text-justify"></div>
+
+            <!-- restHtml ide ovde -->
+            <div
+              id="seo-more"
+              class="seo-rich hidden mt-6 max-w-4xl mx-auto leading-relaxed text-[clamp(11px,2vw,12px)] text-justify space-y-4"
+            ></div>
+
             <button
               id="seo-toggle"
               data-i18n="seo.more"
-              class="mt-6 border border-gray-600 px-6 py-2 rounded-lg text-[10px] font-bold uppercase hover:bg-white/5 transition"
+              class="mt-6 border border-[#396F85] px-6 py-2 rounded-lg text-[10px] font-bold uppercase hover:bg-white/5 transition"
+              type="button"
             >
               Show more
             </button>
-          </div>
+          </section>
         </div>
       </main>
 
@@ -666,7 +686,7 @@
         <div class="mx-auto w-full max-w-[1500px] px-4 md:px-6 pb-10">
           <!-- Payment Methods -->
           <div
-            class="flex flex-wrap justify-center items-center gap-5 sm:gap-7 mb-8 opacity-90"
+            class="flex md:flex-wrap md:justify-center overflow-x-scroll md:overflow-hidden items-center gap-5 sm:gap-7 mb-8 opacity-90"
           >
             <img
               class="h-6 sm:h-7"

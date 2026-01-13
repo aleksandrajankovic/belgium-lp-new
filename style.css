@@ -1,74 +1,46 @@
 /* =========================
-   SEO TYPOGRAPHY (UNIFIED)
+   SEO RICH CONTENT STYLES
    ========================= */
 
-.seo-typography {
-  font-family: "Roboto", sans-serif;
-  color: rgba(156, 163, 175, 0.95); /* text-gray-400 */
-  font-size: clamp(11px, 2vw, 12px);
-  line-height: 1.7;
-  text-align: justify;
+.seo-rich {
+  color: #3f7d95;
+  @apply text-[clamp(11px,2vw,12px)] leading-relaxed text-justify;
 }
 
-/* Naslovi */
-.seo-typography h2,
-.seo-typography h3,
-.seo-h {
-  font-family: "Roboto Condensed", sans-serif;
-  font-weight: 700;
-  color: rgb(209 213 219); /* gray-300 */
+/* Headings */
+.seo-rich h2 {
+  @apply mt-8 mb-4 text-center font-bold text-[clamp(14px,2.4vw,16px)];
 }
 
-/* H2 – sekcije (centrirane kao gore) */
-.seo-typography h2 {
-  text-align: center;
-  font-size: clamp(13px, 2.4vw, 15px);
-  margin: 28px 0 14px;
+.seo-rich h3 {
+  @apply mt-6 mb-2 font-bold text-[clamp(13px,2.2vw,14px)];
 }
 
-/* H3 – podnaslovi */
-.seo-typography h3 {
-  font-size: clamp(12px, 2.2vw, 14px);
-  margin: 20px 0 8px;
+/* Paragraphs */
+.seo-rich p {
+  @apply mb-4;
 }
 
-/* Paragrafi */
-.seo-typography p {
-  margin-top: 10px;
+/* Lists */
+.seo-rich ul {
+  @apply list-disc pl-5 space-y-1 mb-4;
 }
 
-/* Strong */
-.seo-typography strong {
-  color: rgb(229 231 235);
-  font-weight: 700;
+.seo-rich ol {
+  @apply list-decimal pl-5 space-y-2 mb-4;
 }
 
-/* Linkovi – TAČNA BOJA */
-.seo-typography a {
-  color: #396f85;
+/* Strong text – ista boja, samo jače */
+.seo-rich strong {
+  @apply font-semibold;
+}
+
+/* Links – ISTA BOJA, samo underline + hover */
+.seo-rich a {
+  color: #3f7d95;
   text-decoration: underline;
 }
-.seo-typography a:hover {
-  color: #ffffff;
-}
 
-/* Liste – kontrola da ne “beže” */
-.seo-typography ul,
-.seo-typography ol {
-  margin-top: 10px;
-  padding-left: 18px;
-}
-
-.seo-typography li {
-  margin-top: 6px;
-}
-
-/* Numerisane sekcije (Football, Tennis…) */
-.seo-typography ol > li {
-  margin-top: 18px;
-}
-
-/* Mali heading unutar lista */
-.seo-typography p.font-semibold {
-  margin-top: 10px;
+.seo-rich a:hover {
+  filter: brightness(1.25);
 }

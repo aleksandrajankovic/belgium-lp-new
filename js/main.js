@@ -4,15 +4,15 @@ const I18N = {
       label: "EN",
       link1: "Casino",
       link2: "Sport",
-      linkCasino: "https://meridianbet.be/en/betting",
-      linkSport: "https://meridianbet.be/en/registration",
+      linkCasino: "https://meridiancasino.be",
+      linkSport: "https://meridiansports.be",
     },
     card1: {
       title: "SPORTS BETTING",
       desc: "Don’t miss the Action! Explore the Latest Sports Events and Exclusive Promotions Now.",
       cta: "GO TO SPORT",
       reg: "REGISTER NOW",
-      link: "https://meridianbet.be/en/betting",
+      link: "https://meridiansports.be",
       linkReg: "https://meridianbet.be/en/registration",
     },
     card2: {
@@ -20,7 +20,7 @@ const I18N = {
       desc: "Experience the Thrill in Real-Time! Dive into the Largest Selection of Live Betting Events.",
       cta: "GO TO CASINO",
       reg: "REGISTER NOW",
-      link: "https://meridianbet.be/en/betting",
+      link: "https://meridiancasino.be",
       linkReg: "https://meridianbet.be/en/registration",
     },
     store: {
@@ -44,7 +44,16 @@ const I18N = {
       introTitle: "Introduction to Online Betting in Belgium",
       introBody:
         "Online betting in Belgium has grown rapidly, with more players seeking reliable platforms that offer excitement, variety, and security. Meridianbet stands out as a leading site for <strong>online betting Belgium</strong>, thanks to its innovative features, vast sports coverage, and user-friendly experience. Whether you are new to online betting or a seasoned punter, understanding what sets Meridianbet apart can help elevate your <strong>online betting</strong> strategy.",
-      restHtml: `...`,
+      restHtml: ` <h2>Why Meridianbet Is a Top Choice for Online Betting</h2>
+
+  <h3>Trusted and Regulated in Belgium</h3>
+  <p>Meridianbet is fully licensed to operate in Belgium...</p>
+
+  <h3>Comprehensive Sports Coverage</h3>
+  <ul>
+    <li><strong>45,000+ live matches monthly</strong></li>
+    <li>Top European leagues</li>
+  </ul>`,
       more: "Show more",
       less: "Show less",
     },
@@ -55,15 +64,15 @@ const I18N = {
       label: "FR",
       link1: "Casino",
       link2: "Paris sportifs",
-      linkCasino: "https://meridianbet.be/fr/pari",
-      linkSport: "https://meridianbet.be/fr/inscription",
+      linkCasino: "https://meridiancasino.be",
+      linkSport: "hhttps://meridiansports.be",
     },
     card1: {
       title: "PARIS SPORTIFS",
       desc: "Ne manquez pas l’action ! Découvrez les derniers événements sportifs et les promotions exclusives dès maintenant.",
       cta: "ALLER AU SPORT",
       reg: "S’INSCRIRE",
-      link: "https://meridianbet.be/fr/pari",
+      link: "https://meridiansports.be",
       linkReg: "https://meridianbet.be/fr/inscription",
     },
     card2: {
@@ -71,7 +80,7 @@ const I18N = {
       desc: "Vivez le frisson en temps réel ! Plongez dans la plus grande sélection d’événements de paris en direct.",
       cta: "ALLER AU CASINO",
       reg: "S’INSCRIRE",
-      link: "https://meridianbet.be/fr/pari",
+      link: "https://meridiancasino.be",
       linkReg: "https://meridianbet.be/fr/inscription",
     },
     store: {
@@ -93,8 +102,8 @@ const I18N = {
       tag: "Paris Sportif",
       h1: "Paris Sportif",
       introTitle: "Paris en ligne en Belgique",
-      introBody: `...`, // ostaje tvoje
-      restHtml: `...`, // ostaje tvoje
+      introBody: `...`,
+      restHtml: `...`,
       more: "Afficher plus",
       less: "Afficher moins",
     },
@@ -104,16 +113,16 @@ const I18N = {
     nav: {
       label: "NL",
       link1: "Casino",
-      link2: "Sportweddenschappen",
-      linkCasino: "https://meridianbet.be/nl/weddenschappen",
-      linkSport: "https://meridianbet.be/nl/registratie",
+      link2: "Sport",
+      linkCasino: "https://meridiancasino.be",
+      linkSport: "https://meridiansports.be",
     },
     card1: {
       title: "SPORTWEDDENSCHAPPEN",
       desc: "Mis de actie niet! Ontdek de nieuwste sportevenementen en exclusieve promoties.",
       cta: "GA NAAR SPORT",
       reg: "NU REGISTREREN",
-      link: "https://meridianbet.be/nl/weddenschappen",
+      link: "https://meridiansports.be",
       linkReg: "https://meridianbet.be/nl/registratie",
     },
     card2: {
@@ -121,7 +130,7 @@ const I18N = {
       desc: "Beleef de spanning in real time! Duik in het grootste aanbod van live weddenschappen.",
       cta: "GA NAAR CASINO",
       reg: "NU REGISTREREN",
-      link: "https://meridianbet.be/nl/weddenschappen",
+      link: "https://meridiancasino.be",
       linkReg: "https://meridianbet.be/nl/registratie",
     },
     store: {
